@@ -17,7 +17,9 @@
 <title>DQ Capture</title>
 
 
-<!-- LIVE BARCODE / QR LIBRARY -->
+<!--
+  Barcode + QR scanner
+-->
 
 <script
   src="https://unpkg.com/html5-qrcode"
@@ -27,14 +29,13 @@
 
 <style>
 
-/*******************************************************
- * GLOBAL
- *******************************************************/
+/* =====================================================
+   GLOBAL
+===================================================== */
 
 * {
   box-sizing: border-box;
 }
-
 
 html,
 body {
@@ -46,7 +47,6 @@ body {
   min-height: 100%;
 
 }
-
 
 body {
 
@@ -64,7 +64,6 @@ body {
 
 }
 
-
 button,
 input,
 select {
@@ -73,7 +72,6 @@ select {
 
 }
 
-
 .hidden {
 
   display: none !important;
@@ -81,9 +79,9 @@ select {
 }
 
 
-/*******************************************************
- * MAIN PAGE
- *******************************************************/
+/* =====================================================
+   MAIN PAGE
+===================================================== */
 
 #mainPage {
 
@@ -104,9 +102,9 @@ select {
 
 .main-logo {
 
-  width: 78px;
+  width: 80px;
 
-  height: 78px;
+  height: 80px;
 
   border-radius: 25px;
 
@@ -116,9 +114,9 @@ select {
 
   justify-content: center;
 
-  color: #fff;
+  color: white;
 
-  font-size: 28px;
+  font-size: 29px;
 
   font-weight: 950;
 
@@ -130,8 +128,8 @@ select {
     );
 
   box-shadow:
-    0 14px 40px
-    rgba(91,44,255,.22);
+    0 15px 40px
+    rgba(91,44,255,.25);
 
 }
 
@@ -140,7 +138,7 @@ select {
 
   margin-top: 22px;
 
-  font-size: 37px;
+  font-size: 38px;
 
   font-weight: 950;
 
@@ -199,12 +197,15 @@ select {
 
   text-align: left;
 
+  cursor: pointer;
+
 }
 
 
 .main-button:active {
 
-  transform: scale(.97);
+  transform:
+    scale(.97);
 
 }
 
@@ -229,7 +230,8 @@ select {
 
   background: white;
 
-  border: 2px solid #e7e7ef;
+  border:
+    2px solid #e7e7ef;
 
 }
 
@@ -320,9 +322,9 @@ select {
 }
 
 
-/*******************************************************
- * DH PAGE
- *******************************************************/
+/* =====================================================
+   DH
+===================================================== */
 
 #dhPage {
 
@@ -335,16 +337,16 @@ select {
 }
 
 
-/*******************************************************
- * MH
- *******************************************************/
+/* =====================================================
+   MH
+===================================================== */
 
 #mhPage {
 
   min-height: 100vh;
 
   padding:
-    14px 14px 115px;
+    14px 14px 120px;
 
 }
 
@@ -360,9 +362,9 @@ select {
 }
 
 
-/*******************************************************
- * HEADER
- *******************************************************/
+/* =====================================================
+   HEADER
+===================================================== */
 
 .header {
 
@@ -442,9 +444,9 @@ select {
 }
 
 
-/*******************************************************
- * HERO
- *******************************************************/
+/* =====================================================
+   HERO
+===================================================== */
 
 .hero h1 {
 
@@ -470,9 +472,9 @@ select {
 }
 
 
-/*******************************************************
- * CARD
- *******************************************************/
+/* =====================================================
+   CARD
+===================================================== */
 
 .card {
 
@@ -489,10 +491,6 @@ select {
 
 }
 
-
-/*******************************************************
- * LABEL
- *******************************************************/
 
 .label {
 
@@ -513,9 +511,9 @@ select {
 }
 
 
-/*******************************************************
- * LPN
- *******************************************************/
+/* =====================================================
+   LPN
+===================================================== */
 
 .lpn-row {
 
@@ -550,7 +548,8 @@ select {
 
 .lpn:focus {
 
-  border-color: #5b2cff;
+  border-color:
+    #5b2cff;
 
 }
 
@@ -565,16 +564,19 @@ select {
 
   color: white;
 
-  background: #5b2cff;
+  background:
+    #5b2cff;
 
   font-size: 24px;
+
+  cursor: pointer;
 
 }
 
 
-/*******************************************************
- * SELECT
- *******************************************************/
+/* =====================================================
+   SELECT
+===================================================== */
 
 select {
 
@@ -596,9 +598,9 @@ select {
 }
 
 
-/*******************************************************
- * SCANNER
- *******************************************************/
+/* =====================================================
+   SCANNER
+===================================================== */
 
 #scannerPanel {
 
@@ -608,7 +610,7 @@ select {
 
   inset: 0;
 
-  z-index: 9999;
+  z-index: 99999;
 
   background: black;
 
@@ -629,13 +631,19 @@ select {
 
   display: flex;
 
-  justify-content: space-between;
-
   align-items: center;
+
+  justify-content: space-between;
 
   padding: 18px;
 
   color: white;
+
+  background:
+    linear-gradient(
+      rgba(0,0,0,.8),
+      transparent
+    );
 
 }
 
@@ -685,13 +693,16 @@ select {
   left: 50%;
 
   transform:
-    translate(-50%, -50%);
+    translate(
+      -50%,
+      -50%
+    );
 
-  width: 78%;
+  width: 80%;
 
-  max-width: 390px;
+  max-width: 400px;
 
-  height: 170px;
+  height: 180px;
 
   border:
     3px solid white;
@@ -700,7 +711,7 @@ select {
 
   box-shadow:
     0 0 0 9999px
-    rgba(0,0,0,.42);
+    rgba(0,0,0,.45);
 
   pointer-events: none;
 
@@ -715,11 +726,14 @@ select {
 
   right: 8%;
 
-  top: 50%;
-
   height: 3px;
 
-  background: #ff3b8d;
+  background:
+    #ff3b8d;
+
+  box-shadow:
+    0 0 15px
+    #ff3b8d;
 
   animation:
     scanline 1.8s
@@ -750,11 +764,11 @@ select {
 
   position: absolute;
 
-  bottom: 60px;
-
   left: 20px;
 
   right: 20px;
+
+  bottom: 60px;
 
   text-align: center;
 
@@ -767,9 +781,9 @@ select {
 }
 
 
-/*******************************************************
- * PHOTOS
- *******************************************************/
+/* =====================================================
+   PHOTO
+===================================================== */
 
 .photo-box {
 
@@ -882,13 +896,13 @@ select {
 }
 
 
-/*******************************************************
- * STATUS
- *******************************************************/
+/* =====================================================
+   STATUS
+===================================================== */
 
 .status {
 
-  min-height: 24px;
+  min-height: 28px;
 
   text-align: center;
 
@@ -915,9 +929,9 @@ select {
 }
 
 
-/*******************************************************
- * SUBMIT
- *******************************************************/
+/* =====================================================
+   SUBMIT
+===================================================== */
 
 .bottom {
 
@@ -935,7 +949,12 @@ select {
     12px 15px;
 
   background:
-    rgba(246,246,250,.95);
+    rgba(
+      246,
+      246,
+      250,
+      .96
+    );
 
   border-top:
     1px solid #e6e6ee;
@@ -982,9 +1001,9 @@ select {
 }
 
 
-/*******************************************************
- * SUCCESS
- *******************************************************/
+/* =====================================================
+   SUCCESS
+===================================================== */
 
 .success {
 
@@ -992,7 +1011,8 @@ select {
 
   text-align: center;
 
-  padding: 50px 10px;
+  padding:
+    50px 10px;
 
 }
 
@@ -1007,9 +1027,11 @@ select {
 
   border-radius: 50%;
 
-  background: #e8faef;
+  background:
+    #e8faef;
 
-  color: #16a765;
+  color:
+    #16a765;
 
   display: flex;
 
@@ -1080,7 +1102,7 @@ select {
 
 
 <!-- =====================================================
-     MAIN
+     MAIN PAGE
 ===================================================== -->
 
 <section id="mainPage">
@@ -1109,9 +1131,11 @@ select {
       class="main-button mh"
       type="button">
 
+
       <div class="button-icon">
         📦
       </div>
+
 
       <div class="button-text">
 
@@ -1125,9 +1149,11 @@ select {
 
       </div>
 
+
       <div class="button-arrow">
         →
       </div>
+
 
     </button>
 
@@ -1137,9 +1163,11 @@ select {
       class="main-button dh"
       type="button">
 
+
       <div class="button-icon">
         🏠
       </div>
+
 
       <div class="button-text">
 
@@ -1153,9 +1181,11 @@ select {
 
       </div>
 
+
       <div class="button-arrow">
         →
       </div>
+
 
     </button>
 
@@ -1177,7 +1207,7 @@ select {
 
 
 <!-- =====================================================
-     DH
+     DH PAGE
 ===================================================== -->
 
 <section
@@ -1187,7 +1217,7 @@ select {
 
 
 <!-- =====================================================
-     MH
+     MH PAGE
 ===================================================== -->
 
 <section
@@ -1195,7 +1225,9 @@ select {
   class="hidden">
 
 
-  <!-- SCANNER -->
+  <!-- ===================================================
+       SCANNER
+  ==================================================== -->
 
   <div id="scannerPanel">
 
@@ -1231,7 +1263,7 @@ select {
 
     <div class="scanner-hint">
 
-      Point camera at Barcode or QR Code
+      Barcode + QR supported
 
     </div>
 
@@ -1239,7 +1271,9 @@ select {
   </div>
 
 
-  <!-- FORM -->
+  <!-- ===================================================
+       FORM
+  ==================================================== -->
 
   <div
     id="formApp"
@@ -1247,6 +1281,7 @@ select {
 
 
     <header class="header">
+
 
       <div class="brand">
 
@@ -1265,6 +1300,7 @@ select {
         ● LIVE
       </div>
 
+
     </header>
 
 
@@ -1282,9 +1318,12 @@ select {
     </section>
 
 
-    <!-- LPN -->
+    <!-- =================================================
+         LPN
+    ================================================== -->
 
     <div class="card">
+
 
       <label class="label">
         LPN ID
@@ -1292,6 +1331,7 @@ select {
 
 
       <div class="lpn-row">
+
 
         <input
           id="lpn"
@@ -1313,14 +1353,31 @@ select {
 
         </button>
 
+
       </div>
+
+
+      <div
+        style="
+          margin-top:8px;
+          color:#888;
+          font-size:12px;
+        ">
+
+        Scan Barcode / QR or type manually
+
+      </div>
+
 
     </div>
 
 
-    <!-- DQ -->
+    <!-- =================================================
+         DQ TYPE
+    ================================================== -->
 
     <div class="card">
+
 
       <label class="label">
         DQ Type
@@ -1329,26 +1386,34 @@ select {
 
       <select id="dqType">
 
+
         <option value="">
           Select issue
         </option>
+
 
         <option value="Over Filling">
           📦 Over Filling
         </option>
 
+
         <option value="Damage">
           ⚠️ Damage
         </option>
 
+
       </select>
+
 
     </div>
 
 
-    <!-- IMAGE 1 -->
+    <!-- =================================================
+         IMAGE 1
+    ================================================== -->
 
     <div class="card">
+
 
       <label class="label">
         Image 1 — Required
@@ -1358,8 +1423,7 @@ select {
       <div class="photo-box">
 
 
-        <div
-          id="placeholder1">
+        <div id="placeholder1">
 
           <div class="photo-icon">
             📸
@@ -1400,14 +1464,19 @@ select {
           capture="environment"
         >
 
+
       </div>
+
 
     </div>
 
 
-    <!-- IMAGE 2 -->
+    <!-- =================================================
+         IMAGE 2
+    ================================================== -->
 
     <div class="card">
+
 
       <label class="label">
         Image 2 — Optional
@@ -1417,8 +1486,7 @@ select {
       <div class="photo-box">
 
 
-        <div
-          id="placeholder2">
+        <div id="placeholder2">
 
           <div class="photo-icon">
             📸
@@ -1459,14 +1527,19 @@ select {
           capture="environment"
         >
 
+
       </div>
+
 
     </div>
 
 
-    <!-- IMAGE 3 -->
+    <!-- =================================================
+         IMAGE 3
+    ================================================== -->
 
     <div class="card">
+
 
       <label class="label">
         Image 3 — Optional
@@ -1476,8 +1549,7 @@ select {
       <div class="photo-box">
 
 
-        <div
-          id="placeholder3">
+        <div id="placeholder3">
 
           <div class="photo-icon">
             📸
@@ -1518,7 +1590,9 @@ select {
           capture="environment"
         >
 
+
       </div>
+
 
     </div>
 
@@ -1542,7 +1616,9 @@ select {
   </div>
 
 
-  <!-- SUCCESS -->
+  <!-- ===================================================
+       SUCCESS
+  ==================================================== -->
 
   <div
     id="success"
@@ -1560,7 +1636,7 @@ select {
 
 
     <p id="successText">
-      Saved successfully.
+      Your submission was sent.
     </p>
 
 
@@ -1577,7 +1653,9 @@ select {
   </div>
 
 
-  <!-- SUBMIT -->
+  <!-- ===================================================
+       SUBMIT
+  ==================================================== -->
 
   <div
     id="bottom"
@@ -1602,19 +1680,11 @@ select {
 
 <script>
 
+
 /***********************************************************
- * IMPORTANT
+ * API URL
  *
- * USE THE STABLE /EXEC URL FROM:
- *
- * Apps Script
- * → Deploy
- * → Manage deployments
- * → Web app
- *
- * Example:
- *
- * https://script.google.com/macros/s/XXXX/exec
+ * YOUR CURRENT DEPLOYMENT
  ***********************************************************/
 
 const API_URL =
@@ -1644,10 +1714,12 @@ const dhPage =
 
 
 document
-  .getElementById('mhButton')
+  .getElementById(
+    'mhButton'
+  )
   .addEventListener(
     'click',
-    () => {
+    function() {
 
       mainPage.style.display =
         'none';
@@ -1670,10 +1742,12 @@ document
 
 
 document
-  .getElementById('dhButton')
+  .getElementById(
+    'dhButton'
+  )
   .addEventListener(
     'click',
-    () => {
+    function() {
 
       mainPage.style.display =
         'none';
@@ -1686,12 +1760,17 @@ document
         'hidden'
       );
 
+      window.scrollTo(
+        0,
+        0
+      );
+
     }
   );
 
 
 /***********************************************************
- * SCANNER
+ * LPN
  ***********************************************************/
 
 const lpn =
@@ -1699,6 +1778,10 @@ const lpn =
     'lpn'
   );
 
+
+/***********************************************************
+ * SCANNER
+ ***********************************************************/
 
 const scannerPanel =
   document.getElementById(
@@ -1730,13 +1813,15 @@ let scanLocked =
   false;
 
 
-scanButton.addEventListener(
-  'click',
-  openScanner
-);
+scanButton
+  .addEventListener(
+    'click',
+    openScanner
+  );
 
 
 async function openScanner() {
+
 
   scannerPanel.style.display =
     'block';
@@ -1748,6 +1833,16 @@ async function openScanner() {
 
   try {
 
+
+    if (
+      scannerRunning
+    ) {
+
+      await stopScanner();
+
+    }
+
+
     scanner =
       new Html5Qrcode(
         'reader'
@@ -1756,7 +1851,10 @@ async function openScanner() {
 
     const config = {
 
-      fps: 15,
+
+      fps:
+        15,
+
 
       qrbox:
         function(
@@ -1764,7 +1862,9 @@ async function openScanner() {
           height
         ) {
 
+
           return {
+
 
             width:
               Math.min(
@@ -1772,59 +1872,94 @@ async function openScanner() {
                 400
               ),
 
+
             height:
               Math.min(
                 height * .30,
                 180
               )
 
+
           };
+
 
         },
 
+
       formatsToSupport: [
 
-        Html5QrcodeSupportedFormats.QR_CODE,
 
-        Html5QrcodeSupportedFormats.CODE_128,
+        Html5QrcodeSupportedFormats
+          .QR_CODE,
 
-        Html5QrcodeSupportedFormats.CODE_39,
 
-        Html5QrcodeSupportedFormats.CODE_93,
+        Html5QrcodeSupportedFormats
+          .CODE_128,
 
-        Html5QrcodeSupportedFormats.EAN_13,
 
-        Html5QrcodeSupportedFormats.EAN_8,
+        Html5QrcodeSupportedFormats
+          .CODE_39,
 
-        Html5QrcodeSupportedFormats.UPC_A,
 
-        Html5QrcodeSupportedFormats.UPC_E,
+        Html5QrcodeSupportedFormats
+          .CODE_93,
 
-        Html5QrcodeSupportedFormats.ITF14,
 
-        Html5QrcodeSupportedFormats.DATA_MATRIX,
+        Html5QrcodeSupportedFormats
+          .EAN_13,
 
-        Html5QrcodeSupportedFormats.PDF_417,
 
-        Html5QrcodeSupportedFormats.AZTEC
+        Html5QrcodeSupportedFormats
+          .EAN_8,
+
+
+        Html5QrcodeSupportedFormats
+          .UPC_A,
+
+
+        Html5QrcodeSupportedFormats
+          .UPC_E,
+
+
+        Html5QrcodeSupportedFormats
+          .ITF14,
+
+
+        Html5QrcodeSupportedFormats
+          .DATA_MATRIX,
+
+
+        Html5QrcodeSupportedFormats
+          .PDF_417,
+
+
+        Html5QrcodeSupportedFormats
+          .AZTEC
+
 
       ]
+
 
     };
 
 
     await scanner.start(
 
+
       {
         facingMode:
           'environment'
       },
 
+
       config,
+
 
       onScanSuccess,
 
-      () => {}
+
+      function() {}
+
 
     );
 
@@ -1835,7 +1970,10 @@ async function openScanner() {
 
   } catch(error) {
 
-    console.error(error);
+
+    console.error(
+      error
+    );
 
 
     scannerPanel.style.display =
@@ -1843,8 +1981,12 @@ async function openScanner() {
 
 
     showError(
-      'Camera could not be opened. Use HTTPS and allow camera permission.'
+
+      'Camera could not be opened. ' +
+      'Allow camera permission and use HTTPS.'
+
     );
+
 
   }
 
@@ -1854,6 +1996,7 @@ async function openScanner() {
 async function onScanSuccess(
   decodedText
 ) {
+
 
   if (
     !scannerRunning ||
@@ -1880,7 +2023,11 @@ async function onScanSuccess(
   ) {
 
     navigator.vibrate(
-      [100,50,100]
+      [
+        100,
+        50,
+        100
+      ]
     );
 
   }
@@ -1898,18 +2045,16 @@ async function onScanSuccess(
   );
 
 
-  document
-    .getElementById(
-      'dqType'
-    )
-    .focus();
-
 }
 
 
 async function stopScanner() {
 
-  if (scanner) {
+
+  if (
+    scanner
+  ) {
+
 
     try {
 
@@ -1924,6 +2069,7 @@ async function stopScanner() {
 
     } catch(e) {}
 
+
   }
 
 
@@ -1934,45 +2080,52 @@ async function stopScanner() {
   scannerRunning =
     false;
 
+
 }
 
 
-closeScanner.addEventListener(
-  'click',
-  async () => {
+closeScanner
+  .addEventListener(
+    'click',
+    async function() {
 
-    await stopScanner();
+      await stopScanner();
 
-    scannerPanel.style.display =
-      'none';
+      scannerPanel.style.display =
+        'none';
 
-  }
-);
+    }
+  );
 
 
 /***********************************************************
- * IMAGE DATA
+ * IMAGES
  ***********************************************************/
 
 const images = {
 
-  1: null,
+  1:
+    null,
 
-  2: null,
+  2:
+    null,
 
-  3: null
+  3:
+    null
 
 };
 
 
-[1,2,3].forEach(
-  setupPhoto
-);
+[1,2,3]
+  .forEach(
+    setupPhoto
+  );
 
 
 function setupPhoto(
   number
 ) {
+
 
   const input =
     document.getElementById(
@@ -2002,6 +2155,7 @@ function setupPhoto(
     'change',
     function() {
 
+
       const file =
         input.files[0];
 
@@ -2018,7 +2172,8 @@ function setupPhoto(
       )
 
       .then(
-        dataUrl => {
+        function(dataUrl) {
+
 
           images[number] =
             dataUrl;
@@ -2042,18 +2197,22 @@ function setupPhoto(
 
           clearStatus();
 
+
         }
       )
 
       .catch(
-        error => {
+        function(error) {
+
 
           showError(
             error.message
           );
 
+
         }
       );
+
 
     }
   );
@@ -2061,9 +2220,10 @@ function setupPhoto(
 
   retake.addEventListener(
     'click',
-    function(e) {
+    function(event) {
 
-      e.stopPropagation();
+
+      event.stopPropagation();
 
 
       input.value =
@@ -2089,8 +2249,10 @@ function setupPhoto(
       retake.style.display =
         'none';
 
+
     }
   );
+
 
 }
 
@@ -2103,8 +2265,13 @@ function compressImage(
   file
 ) {
 
+
   return new Promise(
-    function(resolve,reject) {
+    function(
+      resolve,
+      reject
+    ) {
+
 
       const reader =
         new FileReader();
@@ -2113,12 +2280,14 @@ function compressImage(
       reader.onload =
         function(event) {
 
+
           const img =
             new Image();
 
 
           img.onload =
             function() {
+
 
               let width =
                 img.width;
@@ -2137,9 +2306,11 @@ function compressImage(
                 height > max
               ) {
 
+
                 if (
                   width > height
                 ) {
+
 
                   height =
                     Math.round(
@@ -2148,10 +2319,13 @@ function compressImage(
                       width
                     );
 
+
                   width =
                     max;
 
+
                 } else {
+
 
                   width =
                     Math.round(
@@ -2160,10 +2334,13 @@ function compressImage(
                       height
                     );
 
+
                   height =
                     max;
 
+
                 }
+
 
               }
 
@@ -2198,11 +2375,14 @@ function compressImage(
 
 
               resolve(
+
                 canvas.toDataURL(
                   'image/jpeg',
                   .70
                 )
+
               );
+
 
             };
 
@@ -2221,6 +2401,7 @@ function compressImage(
 
           img.src =
             event.target.result;
+
 
         };
 
@@ -2241,6 +2422,7 @@ function compressImage(
         file
       );
 
+
     }
   );
 
@@ -2252,25 +2434,16 @@ function compressImage(
  ***********************************************************/
 
 document
-  .getElementById('submit')
+  .getElementById(
+    'submit'
+  )
   .addEventListener(
     'click',
     submitDQ
   );
 
 
-async function submitDQ() {
-
-  const status =
-    document.getElementById(
-      'status'
-    );
-
-
-  const submitButton =
-    document.getElementById(
-      'submit'
-    );
+function submitDQ() {
 
 
   const lpnId =
@@ -2278,9 +2451,18 @@ async function submitDQ() {
 
 
   const dqType =
-    document.getElementById(
-      'dqType'
-    ).value;
+    document
+      .getElementById(
+        'dqType'
+      )
+      .value;
+
+
+  const submitButton =
+    document
+      .getElementById(
+        'submit'
+      );
 
 
   /*******************************************************
@@ -2289,56 +2471,40 @@ async function submitDQ() {
 
   if (!lpnId) {
 
+
     showError(
       'Please scan or type the LPN ID.'
     );
 
+
     lpn.focus();
+
 
     return;
 
   }
 
 
-  if (
-    !dqType
-  ) {
+  if (!dqType) {
+
 
     showError(
       'Please select Over Filling or Damage.'
     );
 
+
     return;
 
   }
 
 
-  if (
-    !images[1]
-  ) {
+  if (!images[1]) {
+
 
     showError(
       'Please capture Image 1.'
     );
 
-    return;
-
-  }
-
-
-  /*******************************************************
-   * API URL CHECK
-   *******************************************************/
-
-  if (
-    !API_URL ||
-    API_URL ===
-      'YOUR_STABLE_EXEC_URL'
-  ) {
-
-    showError(
-      'API URL is not configured.'
-    );
 
     return;
 
@@ -2346,7 +2512,7 @@ async function submitDQ() {
 
 
   /*******************************************************
-   * BUTTON
+   * DISABLE
    *******************************************************/
 
   submitButton.disabled =
@@ -2354,197 +2520,147 @@ async function submitDQ() {
 
 
   submitButton.textContent =
-    'Saving...';
+    'Submitting...';
 
 
   clearStatus();
 
 
-  try {
+  /*******************************************************
+   * PAYLOAD
+   *******************************************************/
+
+  const payload =
+    JSON.stringify({
 
 
-    /*****************************************************
-     * SEND TO APPS SCRIPT
-     *
-     * IMPORTANT:
-     * application/x-www-form-urlencoded is used here.
-     * This avoids the JSON preflight/CORS problem.
-     *****************************************************/
-
-    const payload =
-      encodeURIComponent(
-        JSON.stringify({
-
-          lpnId:
-            lpnId,
-
-          dqType:
-            dqType,
-
-          image1:
-            images[1],
-
-          image2:
-            images[2],
-
-          image3:
-            images[3]
-
-        })
-      );
+      lpnId:
+        lpnId,
 
 
-    const response =
-      await fetch(
-
-        API_URL,
-
-        {
-
-          method:
-            'POST',
-
-          headers: {
-
-            'Content-Type':
-              'application/x-www-form-urlencoded;charset=UTF-8'
-
-          },
-
-          body:
-            'payload=' +
-            payload
-
-        }
-
-      );
+      dqType:
+        dqType,
 
 
-    /*****************************************************
-     * READ RESPONSE
-     *****************************************************/
-
-    const text =
-      await response.text();
+      image1:
+        images[1],
 
 
-    console.log(
-      'SERVER RESPONSE:',
-      text
+      image2:
+        images[2],
+
+
+      image3:
+        images[3],
+
+
+      clientTime:
+        new Date()
+          .toISOString()
+
+
+    });
+
+
+  /*******************************************************
+   * HIDDEN IFRAME
+   *
+   * Normal form POST avoids CORS.
+   *******************************************************/
+
+  const iframe =
+    document.createElement(
+      'iframe'
     );
 
 
-    let result;
+  iframe.name =
+    'DQ_FRAME_' +
+    Date.now();
 
 
-    try {
-
-      result =
-        JSON.parse(
-          text
-        );
-
-    } catch(error) {
-
-      throw new Error(
-        'Server did not return valid JSON.'
-      );
-
-    }
+  iframe.style.display =
+    'none';
 
 
-    /*****************************************************
-     * CHECK SERVER SUCCESS
-     *****************************************************/
-
-    if (
-      !result.success
-    ) {
-
-      throw new Error(
-        result.error ||
-        'Google Sheet save failed.'
-      );
-
-    }
+  document.body.appendChild(
+    iframe
+  );
 
 
-    /*****************************************************
-     * SUCCESS
-     *****************************************************/
+  /*******************************************************
+   * FORM
+   *******************************************************/
 
-    let count =
-      0;
-
-
-    if (images[1])
-      count++;
+  const form =
+    document.createElement(
+      'form'
+    );
 
 
-    if (images[2])
-      count++;
+  form.method =
+    'POST';
 
 
-    if (images[3])
-      count++;
+  form.action =
+    API_URL;
 
 
-    document
-      .getElementById(
-        'formApp'
-      )
-      .style.display =
-      'none';
+  form.target =
+    iframe.name;
 
 
-    document
-      .getElementById(
-        'bottom'
-      )
-      .style.display =
-      'none';
+  form.style.display =
+    'none';
 
 
-    document
-      .getElementById(
-        'success'
-      )
-      .style.display =
-      'block';
+  /*******************************************************
+   * PAYLOAD FIELD
+   *******************************************************/
+
+  const payloadInput =
+    document.createElement(
+      'input'
+    );
 
 
-    document
-      .getElementById(
-        'successText'
-      )
-      .textContent =
+  payloadInput.type =
+    'hidden';
 
-      'LPN ' +
-      result.lpnId +
-      ' • ' +
-      result.dqType +
-      ' • ' +
-      count +
-      ' image' +
-      (
-        count === 1
-          ? ''
-          : 's'
-      ) +
-      ' saved successfully.';
+
+  payloadInput.name =
+    'payload';
+
+
+  payloadInput.value =
+    payload;
+
+
+  form.appendChild(
+    payloadInput
+  );
+
+
+  document.body.appendChild(
+    form
+  );
+
+
+  /*******************************************************
+   * SUBMIT
+   *******************************************************/
+
+  try {
+
+
+    form.submit();
 
 
   } catch(error) {
 
 
-    console.error(
-      error
-    );
-
-
     showError(
-      error.message ||
-      'Unable to save data.'
+      'Unable to connect to DQ server.'
     );
 
 
@@ -2555,7 +2671,79 @@ async function submitDQ() {
     submitButton.textContent =
       'Submit DQ →';
 
+
+    return;
+
   }
+
+
+  /*******************************************************
+   * WAIT FOR SERVER
+   *
+   * Apps Script executes in the background.
+   *******************************************************/
+
+  showSuccessMessage(
+    '✓ Submission sent. Saving to Sheet...'
+  );
+
+
+  setTimeout(
+    function() {
+
+
+      try {
+
+        form.remove();
+
+        iframe.remove();
+
+      } catch(e) {}
+
+
+      /***************************************************
+       * SHOW SUCCESS
+       ***************************************************/
+
+      document
+        .getElementById(
+          'formApp'
+        )
+        .style.display =
+        'none';
+
+
+      document
+        .getElementById(
+          'bottom'
+        )
+        .style.display =
+        'none';
+
+
+      document
+        .getElementById(
+          'success'
+        )
+        .style.display =
+        'block';
+
+
+      document
+        .getElementById(
+          'successText'
+        )
+        .textContent =
+
+        'LPN ' +
+        lpnId +
+        ' was submitted. Check the DQ sheet for the new row.';
+
+
+    },
+    6000
+  );
+
 
 }
 
@@ -2585,55 +2773,57 @@ document
         '';
 
 
-      [1,2,3].forEach(
-        function(number) {
+      [1,2,3]
+        .forEach(
+          function(number) {
 
 
-          document
-            .getElementById(
-              'image' + number
-            )
-            .value =
-            '';
+            document
+              .getElementById(
+                'image' + number
+              )
+              .value =
+              '';
 
 
-          document
-            .getElementById(
-              'preview' + number
-            )
-            .src =
-            '';
+            document
+              .getElementById(
+                'preview' + number
+              )
+              .src =
+              '';
 
 
-          document
-            .getElementById(
-              'preview' + number
-            )
-            .style.display =
-            'none';
+            document
+              .getElementById(
+                'preview' + number
+              )
+              .style.display =
+              'none';
 
 
-          document
-            .getElementById(
-              'placeholder' + number
-            )
-            .style.display =
-            'block';
+            document
+              .getElementById(
+                'placeholder' + number
+              )
+              .style.display =
+              'block';
 
 
-          document
-            .getElementById(
-              'retake' + number
-            )
-            .style.display =
-            'none';
+            document
+              .getElementById(
+                'retake' + number
+              )
+              .style.display =
+              'none';
 
 
-          images[number] =
-            null;
+            images[number] =
+              null;
 
-        }
-      );
+
+          }
+        );
 
 
       document
@@ -2660,19 +2850,18 @@ document
         'block';
 
 
-      document
-        .getElementById(
-          'submit'
-        )
-        .disabled =
+      const submitButton =
+        document
+          .getElementById(
+            'submit'
+          );
+
+
+      submitButton.disabled =
         false;
 
 
-      document
-        .getElementById(
-          'submit'
-        )
-        .textContent =
+      submitButton.textContent =
         'Submit DQ →';
 
 
@@ -2681,22 +2870,25 @@ document
 
       lpn.focus();
 
+
     }
   );
 
 
 /***********************************************************
- * STATUS
+ * STATUS FUNCTIONS
  ***********************************************************/
 
 function showError(
   message
 ) {
 
+
   const status =
-    document.getElementById(
-      'status'
-    );
+    document
+      .getElementById(
+        'status'
+      );
 
 
   status.className =
@@ -2707,6 +2899,7 @@ function showError(
     '⚠ ' +
     message;
 
+
 }
 
 
@@ -2714,10 +2907,12 @@ function showSuccessMessage(
   message
 ) {
 
+
   const status =
-    document.getElementById(
-      'status'
-    );
+    document
+      .getElementById(
+        'status'
+      );
 
 
   status.className =
@@ -2727,15 +2922,18 @@ function showSuccessMessage(
   status.textContent =
     message;
 
+
 }
 
 
 function clearStatus() {
 
+
   const status =
-    document.getElementById(
-      'status'
-    );
+    document
+      .getElementById(
+        'status'
+      );
 
 
   status.className =
@@ -2745,9 +2943,11 @@ function clearStatus() {
   status.textContent =
     '';
 
+
 }
 
 </script>
+
 
 </body>
 
